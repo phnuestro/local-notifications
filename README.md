@@ -7,15 +7,25 @@ Schedule, cancel, and react to local (on-device) notifications from Laravel — 
 In your NativePHP Mobile app:
 
 ```bash
-composer config repositories.local-notifications path ../packages/local-notifications
-composer require phnuestro/local-notifications:@dev
+composer require phnuestro/local-notifications
 
 php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register phnuestro/local-notifications
 php artisan native:plugin:validate
 ```
 
-(Swap the `path` repository for a VCS/Packagist entry once you publish the plugin for real.)
+If you haven't tagged a stable release on GitHub yet, pin to the branch instead:
+
+```bash
+composer require phnuestro/local-notifications:dev-main
+```
+
+Working on the plugin itself alongside an app? Use a local path repo so edits are picked up without a Packagist round-trip:
+
+```bash
+composer config repositories.local-notifications path ../local-notifications
+composer require phnuestro/local-notifications:@dev
+```
 
 Native code only takes effect after a full native build:
 
