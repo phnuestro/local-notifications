@@ -4,30 +4,30 @@
         {
             "name": "LocalNotification.RequestPermission",
             "ios": "LocalNotificationFunctions.RequestPermission",
-            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.RequestPermission",
+            "android": "com.phnuestro.plugins.localnotifications.LocalNotificationFunctions.RequestPermission",
             "description": "Requests notification permission from the user (required on Android 13+ and iOS)"
         },
         {
             "name": "LocalNotification.Schedule",
             "ios": "LocalNotificationFunctions.Schedule",
-            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.Schedule",
+            "android": "com.phnuestro.plugins.localnotifications.LocalNotificationFunctions.Schedule",
             "description": "Schedules a local notification, immediately or at a future time"
         },
         {
             "name": "LocalNotification.Cancel",
             "ios": "LocalNotificationFunctions.Cancel",
-            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.Cancel",
+            "android": "com.phnuestro.plugins.localnotifications.LocalNotificationFunctions.Cancel",
             "description": "Cancels a pending or delivered notification by id"
         },
         {
             "name": "LocalNotification.CancelAll",
             "ios": "LocalNotificationFunctions.CancelAll",
-            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.CancelAll",
+            "android": "com.phnuestro.plugins.localnotifications.LocalNotificationFunctions.CancelAll",
             "description": "Cancels every pending or delivered notification scheduled by this plugin"
         }
     ],
     "events": [
-        "Paolo\\LocalNotifications\\Events\\NotificationTapped"
+        "PHNuestro\\LocalNotifications\\Events\\NotificationTapped"
     ],
     "android": {
         "permissions": [
@@ -37,7 +37,7 @@
         ],
         "receivers": [
             {
-                "name": "com.paolo.plugins.localnotifications.NotificationReceiver",
+                "name": "com.phnuestro.plugins.localnotifications.NotificationReceiver",
                 "exported": false
             }
         ],

@@ -1,5 +1,5 @@
 {
-    "name": "paolo/local-notifications",
+    "name": "phnuestro/local-notifications",
     "description": "Local notification plugin for NativePHP Mobile — schedule, cancel and react to native notifications from Laravel.",
     "type": "nativephp-plugin",
     "license": "MIT",
@@ -10,16 +10,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Paolo\\LocalNotifications\\": "src/"
+            "phnuestro\\LocalNotifications\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Paolo\\LocalNotifications\\LocalNotificationServiceProvider"
+                "PHNuestro\\LocalNotifications\\LocalNotificationServiceProvider"
             ],
             "aliases": {
-                "LocalNotification": "Paolo\\LocalNotifications\\Facades\\LocalNotification"
+                "LocalNotification": "PHNuestro\\LocalNotifications\\Facades\\LocalNotification"
             }
         },
         "nativephp": {

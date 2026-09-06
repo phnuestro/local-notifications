@@ -8,10 +8,10 @@ In your NativePHP Mobile app:
 
 ```bash
 composer config repositories.local-notifications path ../packages/local-notifications
-composer require paolo/local-notifications:@dev
+composer require phnuestro/local-notifications:@dev
 
 php artisan vendor:publish --tag=nativephp-plugins-provider
-php artisan native:plugin:register paolo/local-notifications
+php artisan native:plugin:register phnuestro/local-notifications
 php artisan native:plugin:validate
 ```
 
@@ -27,8 +27,8 @@ php artisan native:run ios
 ## Usage (PHP / Livewire / Blade)
 
 ```php
-use Paolo\LocalNotifications\Facades\LocalNotification;
-use Paolo\LocalNotifications\Events\NotificationTapped;
+use PHNuestro\LocalNotifications\Facades\LocalNotification;
+use PHNuestro\LocalNotifications\Events\NotificationTapped;
 use Native\Mobile\Attributes\OnNative;
 
 // Ask for permission once, e.g. on first app launch or a settings screen.
