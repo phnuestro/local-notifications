@@ -1,0 +1,50 @@
+{
+    "namespace": "LocalNotification",
+    "bridge_functions": [
+        {
+            "name": "LocalNotification.RequestPermission",
+            "ios": "LocalNotificationFunctions.RequestPermission",
+            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.RequestPermission",
+            "description": "Requests notification permission from the user (required on Android 13+ and iOS)"
+        },
+        {
+            "name": "LocalNotification.Schedule",
+            "ios": "LocalNotificationFunctions.Schedule",
+            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.Schedule",
+            "description": "Schedules a local notification, immediately or at a future time"
+        },
+        {
+            "name": "LocalNotification.Cancel",
+            "ios": "LocalNotificationFunctions.Cancel",
+            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.Cancel",
+            "description": "Cancels a pending or delivered notification by id"
+        },
+        {
+            "name": "LocalNotification.CancelAll",
+            "ios": "LocalNotificationFunctions.CancelAll",
+            "android": "com.paolo.plugins.localnotifications.LocalNotificationFunctions.CancelAll",
+            "description": "Cancels every pending or delivered notification scheduled by this plugin"
+        }
+    ],
+    "events": [
+        "Paolo\\LocalNotifications\\Events\\NotificationTapped"
+    ],
+    "android": {
+        "permissions": [
+            "android.permission.POST_NOTIFICATIONS",
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            "android.permission.USE_EXACT_ALARM"
+        ],
+        "receivers": [
+            {
+                "name": "com.paolo.plugins.localnotifications.NotificationReceiver",
+                "exported": false
+            }
+        ],
+        "min_version": 23
+    },
+    "ios": {
+        "info_plist": {},
+        "min_version": "13.0"
+    }
+}
