@@ -73,8 +73,28 @@ public function handleTap($id, $data = [])
 
 ## Usage (Vue / React / Inertia)
 
+The plugin's JS bridge lives at `vendor/phnuestro/local-notifications/resources/js/localNotification.js`. Point your bundler at it with an alias — add this to `vite.config.js`:
+
 ```js
-import { requestPermission, schedule, cancel, cancelAll } from '#nativephp/local-notification';
+import path from 'node:path';
+
+export default defineConfig({
+    // ...
+    resolve: {
+        alias: {
+            'phnuestro/local-notifications': path.resolve(
+                __dirname,
+                'vendor/phnuestro/local-notifications/resources/js/localNotification.js'
+            ),
+        },
+    },
+});
+```
+
+Then import as normal:
+
+```js
+import { requestPermission, schedule, cancel, cancelAll } from 'phnuestro/local-notifications';
 
 await requestPermission();
 
