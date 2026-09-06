@@ -27,8 +27,8 @@ php artisan native:run ios
 ## Usage (PHP / Livewire / Blade)
 
 ```php
-use PHNuestro\LocalNotifications\Facades\LocalNotification;
-use PHNuestro\LocalNotifications\Events\NotificationTapped;
+use Phnuestro\LocalNotifications\Facades\LocalNotification;
+use Phnuestro\LocalNotifications\Events\NotificationTapped;
 use Native\Mobile\Attributes\OnNative;
 
 // Ask for permission once, e.g. on first app launch or a settings screen.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Paolo\LocalNotifications\Facades;
+namespace Phnuestro\LocalNotifications\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Facade;
  * @method static bool cancel(string $id)
  * @method static bool cancelAll()
  *
- * @see \Paolo\LocalNotifications\LocalNotification
+ * @see \Phnuestro\LocalNotifications\LocalNotification
  */
 class LocalNotification extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Paolo\LocalNotifications\LocalNotification::class;
+        return \Phnuestro\LocalNotifications\LocalNotification::class;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Paolo\LocalNotifications;
+namespace Phnuestro\LocalNotifications;
 
 use Illuminate\Support\ServiceProvider;
 

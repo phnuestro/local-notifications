@@ -18,7 +18,7 @@ class LocalNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         let data = userInfo["data"] as? [String: Any] ?? [:]
 
         NativeEventDispatcher.dispatch(
-            "Paolo\\LocalNotifications\\Events\\NotificationTapped",
+            "Phnuestro\\LocalNotifications\\Events\\NotificationTapped",
             data: ["id": id, "data": data]
         )
 

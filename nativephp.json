@@ -27,7 +27,7 @@
         }
     ],
     "events": [
-        "PHNuestro\\LocalNotifications\\Events\\NotificationTapped"
+        "Phnuestro\\LocalNotifications\\Events\\NotificationTapped"
     ],
     "android": {
         "permissions": [

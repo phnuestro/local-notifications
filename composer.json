@@ -10,16 +10,16 @@
     },
     "autoload": {
         "psr-4": {
-            "phnuestro\\LocalNotifications\\": "src/"
+            "Phnuestro\\LocalNotifications\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "PHNuestro\\LocalNotifications\\LocalNotificationServiceProvider"
+                "Phnuestro\\LocalNotifications\\LocalNotificationServiceProvider"
             ],
             "aliases": {
-                "LocalNotification": "PHNuestro\\LocalNotifications\\Facades\\LocalNotification"
+                "LocalNotification": "Phnuestro\\LocalNotifications\\Facades\\LocalNotification"
             }
         },
         "nativephp": {

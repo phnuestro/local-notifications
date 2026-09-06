@@ -1,4 +1,4 @@
-package com.paolo.plugins.localnotifications
+package com.phnuestro.plugins.localnotifications
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
@@ -11,10 +11,10 @@ import com.nativephp.mobile.bridge.NativeEventDispatcher
 class NotificationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        val id = intent.getStringExtra("com.paolo.plugins.localnotifications.EXTRA_ID") ?: return
-        val title = intent.getStringExtra("com.paolo.plugins.localnotifications.EXTRA_TITLE") ?: ""
-        val body = intent.getStringExtra("com.paolo.plugins.localnotifications.EXTRA_BODY") ?: ""
-        val channelId = intent.getStringExtra("com.paolo.plugins.localnotifications.EXTRA_CHANNEL_ID") ?: "default"
+        val id = intent.getStringExtra("com.phnuestro.plugins.localnotifications.EXTRA_ID") ?: return
+        val title = intent.getStringExtra("com.phnuestro.plugins.localnotifications.EXTRA_TITLE") ?: ""
+        val body = intent.getStringExtra("com.phnuestro.plugins.localnotifications.EXTRA_BODY") ?: ""
+        val channelId = intent.getStringExtra("com.phnuestro.plugins.localnotifications.EXTRA_CHANNEL_ID") ?: "default"
 
         val tapIntent = Intent(context, NotificationTapReceiver::class.java).apply {
             putExtra("id", id)
@@ -46,7 +46,7 @@ class NotificationTapReceiver : BroadcastReceiver() {
         val id = intent.getStringExtra("id") ?: return
 
         NativeEventDispatcher.dispatch(
-            "Paolo\\LocalNotifications\\Events\\NotificationTapped",
+            "Phnuestro\\LocalNotifications\\Events\\NotificationTapped",
             mapOf("id" to id, "data" to emptyMap<String, Any>())
         )
     }

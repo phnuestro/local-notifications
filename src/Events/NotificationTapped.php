@@ -1,6 +1,6 @@
 <?php
 
-namespace Paolo\LocalNotifications\Events;
+namespace Phnuestro\LocalNotifications\Events;
 
 class NotificationTapped
 {

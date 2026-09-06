@@ -1,4 +1,4 @@
-package com.paolo.plugins.localnotifications
+package com.phnuestro.plugins.localnotifications
 
 import android.app.AlarmManager
 import android.app.NotificationChannel
@@ -15,14 +15,14 @@ import com.nativephp.mobile.bridge.NativeContext
 
 object LocalNotificationFunctions {
 
-    private const val EXTRA_ID = "com.paolo.plugins.localnotifications.EXTRA_ID"
-    private const val EXTRA_TITLE = "com.paolo.plugins.localnotifications.EXTRA_TITLE"
-    private const val EXTRA_BODY = "com.paolo.plugins.localnotifications.EXTRA_BODY"
-    private const val EXTRA_DATA = "com.paolo.plugins.localnotifications.EXTRA_DATA"
-    private const val EXTRA_CHANNEL_ID = "com.paolo.plugins.localnotifications.EXTRA_CHANNEL_ID"
-    private const val EXTRA_CHANNEL_NAME = "com.paolo.plugins.localnotifications.EXTRA_CHANNEL_NAME"
-    private const val EXTRA_SOUND = "com.paolo.plugins.localnotifications.EXTRA_SOUND"
-    private const val EXTRA_BADGE = "com.paolo.plugins.localnotifications.EXTRA_BADGE"
+    private const val EXTRA_ID = "com.phnuestro.plugins.localnotifications.EXTRA_ID"
+    private const val EXTRA_TITLE = "com.phnuestro.plugins.localnotifications.EXTRA_TITLE"
+    private const val EXTRA_BODY = "com.phnuestro.plugins.localnotifications.EXTRA_BODY"
+    private const val EXTRA_DATA = "com.phnuestro.plugins.localnotifications.EXTRA_DATA"
+    private const val EXTRA_CHANNEL_ID = "com.phnuestro.plugins.localnotifications.EXTRA_CHANNEL_ID"
+    private const val EXTRA_CHANNEL_NAME = "com.phnuestro.plugins.localnotifications.EXTRA_CHANNEL_NAME"
+    private const val EXTRA_SOUND = "com.phnuestro.plugins.localnotifications.EXTRA_SOUND"
+    private const val EXTRA_BADGE = "com.phnuestro.plugins.localnotifications.EXTRA_BADGE"
 
     class RequestPermission : BridgeFunction {
         override fun execute(parameters: Map<String, Any>): Map<String, Any> {
